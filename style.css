@@ -114,15 +114,28 @@ body{
 .button{
   cursor: pointer;
   display: inline-flex;
+  gap:0.75rem;
   border: 0;
+  border-radius: 0.5rem;
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  padding: 0.75em 1em;
+  padding: 0.75em 1.5em;
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-bold);
   font-size: 0.925rem;
+}
+
+.button[data-icon="shopping-cart"]::before{
+  content:"";
+  width: 15px;
+  height: 16px;
+  background-image: url("img/icon-cart.svg");
+}
+
+.button:is(:hover, :focus){
+  background-color: var(--clr-primary-500);
 }
 
 /* product styles */
